@@ -1,0 +1,19 @@
+1. scons build/***/gem5.opt -j5
+
+2. scons build/***/tests/opt
+
+3. sudo apt-get install protobuf-compiler
+
+4. sudo apt-get install libprotobuf-dev
+
+5. build/***/gem5.opt configs/example/fs.py
+
+6. telnet 127.0.0.1 3456
+
+7. build/***/gem5.opt configs/example/se.py --cmd=path_to_the_executable
+
+8. build/***/gem5.opt configs/example/se.py --cmd=tests/test-progs/hello/bin/***/linux/hello --cpu-type=detailed --caches --l1d_size=64kB --l1i_size=16kB --l2cache --l2_size=2MB --l3_size=4MB --l3_assoc=16 --l3cache
+
+9. build/***/gem5.opt configs/example/fs.py --script=./scripts/blackscholes_script/blackscholes_64c_simlarge.rcS --cpu-type=DerivO3CPU --l1d_size=64kB --l1i_size=16kB --l2_size=2MB --caches
+
+
