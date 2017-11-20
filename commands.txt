@@ -16,4 +16,10 @@
 
 9. build/***/gem5.opt configs/example/fs.py --script=./scripts/blackscholes_script/blackscholes_64c_simlarge.rcS --cpu-type=DerivO3CPU --l1d_size=64kB --l1i_size=16kB --l2_size=2MB --caches
 
+10. build/***/gem5.opt configs/example/fs.py --script=./scripts/blackscholes_script/blackscholes_64c_simlarge.rcS --cpu-type=DerivO3CPU --l1d_size=64kB --l1i_size=16kB --l2_size=2MB --caches --checkpoint-at-end --maxinsts=200000000
+
+11. build/***/gem5.opt configs/example/fs.py --script=./scripts/blackscholes_script/blackscholes_64c_simlarge.rcS --cpu-type=DerivO3CPU --l1d_size=64kB --l1i_size=16kB --l2_size=2MB --caches -r 1 --restore-with -cpu=DerivO3CPU -W=50000 --maxinsts=200000000
+
+12. build/***/gem5.opt configs/example/se.py --cmd=tests/test-progs/hello/bin/alpha/linux/hello --cpu-type=detailed --caches --l1d_size=64kB --l1i_size=16kB --l2cache --l2_size=2MB --l3_size=4MB --l3_assoc=16 --l3cache
+
 
