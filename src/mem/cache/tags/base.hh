@@ -195,7 +195,8 @@ class BaseTags : public ClockedObject
      */
     Addr blkAlign(Addr addr) const
     {
-        return addr & ~blkMask;
+//         return addr & ~blkMask;
+        return addr;
     }
 
     /**
