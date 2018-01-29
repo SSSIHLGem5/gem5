@@ -306,7 +306,7 @@ public:
      */
     Addr extractTag(Addr addr) const override
     {
-        return addr;
+        return (addr >> tagShift);
     }
 
     /**
@@ -327,7 +327,7 @@ public:
      */
     Addr regenerateBlkAddr(Addr tag, unsigned set) const override
     {
-        return tag;
+        return ((tag << tagShift) | ((Addr)set << setShift));
     }
 
     /**

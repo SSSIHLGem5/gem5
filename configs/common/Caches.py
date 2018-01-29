@@ -71,6 +71,9 @@ class L2Cache(Cache):
     mshrs = 20
     tgts_per_mshr = 12
     write_buffers = 8
+    prefetcher = StridePrefetcher()
+    prefetch_on_access = True
+
 
 class L3Cache(Cache):
     assoc = 16
