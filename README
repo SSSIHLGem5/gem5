@@ -1,5 +1,13 @@
 This is the gem5 simulator.
 
+This is a DRAMCache implementation in gem5 using DRAMSim2, a DRAM simulator integrated with gem5.
+This modifications includes, 
+
+- Validation of Footprint Caching.
+- Running SPEC CPU2006 benchmarks for ALPHA architecture.
+
+If you have questions, please send mail to rsvarun93@gmail.com.
+
 The main website can be found at http://www.gem5.org
 
 A good starting point is http://www.gem5.org/Introduction, and for
